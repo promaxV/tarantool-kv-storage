@@ -17,9 +17,9 @@ API будет доступен по адресу `http://localhost:8000`.
 
 ### Получение токена авторизации
 
-**Endpoint**: `POST /api/login`
+Endpoint: `POST /api/login`
 
-**Запрос**:
+Запрос:
 ```json
 {
     "username": "admin",

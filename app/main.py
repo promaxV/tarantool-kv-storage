@@ -8,7 +8,6 @@ app.include_router(api_router)
 
 @app.on_event("startup")
 async def startup_event():
-    # Инициализируем подключение к Tarantool
     from connect import init_tarantool_connection
     init_tarantool_connection(TARANTOOL_HOST, TARANTOOL_PORT)
 
