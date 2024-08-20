@@ -36,7 +36,7 @@ API будет доступен по адресу `http://localhost:8000`.
 Endpoint: `POST /api/write`
 Заголовки:
 ```
-CopyAuthorization: Bearer your_generated_token
+Authorization: Bearer your_generated_token
 ```
 Запрос:
 ```json
@@ -58,7 +58,7 @@ CopyAuthorization: Bearer your_generated_token
 Endpoint: `POST /api/read`
 Заголовки:
 ```
-CopyAuthorization: Bearer your_generated_token
+Authorization: Bearer your_generated_token
 ```
 Запрос:
 ```json
