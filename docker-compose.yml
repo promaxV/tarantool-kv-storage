@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+  # tarantool:
+  #   image: tarantool/tarantool:latest
+  #   ports:
+  #     - "3301:3301"
+
+  tarantool:
+    image: tarantool/tarantool:latest
+    ports:
+      - "3301:3301"
+
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - tarantool
+    environment:
+      - TARANTOOL_HOST=tarantool
+      - TARANTOOL_PORT=3301
+      - DEFAULT_USERNAME=admin
+      - DEFAULT_PASSWORD=presale
